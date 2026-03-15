@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Tickets</title>
+    <title>View Tickets</title>
 </head>
 
 <body>
 
-<h2>Booked Tickets</h2>
+<h2>Booked Bus Tickets</h2>
 
 <table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Source</th>
+        <th>Destination</th>
+        <th>Price</th>
+    </tr>
 
-<tr>
-<th>ID</th>
-<th>Name</th>
-<th>Source</th>
-<th>Destination</th>
-<th>Price</th>
-</tr>
-
-{% for row in data %}
-
-<tr>
-<td>{{row[0]}}</td>
-<td>{{row[1]}}</td>
-<td>{{row[2]}}</td>
-<td>{{row[3]}}</td>
-<td>{{row[4]}}</td>
-</tr>
-
-{% endfor %}
+    {% for row in data %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+    </tr>
+    {% endfor %}
 
 </table>
+
+<br>
+<a href="/">Back to Home</a>
 
 </body>
 </html>
