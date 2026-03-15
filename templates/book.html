@@ -2,26 +2,86 @@
 <html>
 <head>
 <title>Book Ticket</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Segoe UI;
+background: linear-gradient(120deg,#f093fb,#f5576c);
+}
+
+.form-box{
+background:rgba(255,255,255,0.2);
+backdrop-filter:blur(15px);
+padding:40px;
+border-radius:20px;
+color:white;
+width:350px;
+text-align:center;
+box-shadow:0 10px 40px rgba(0,0,0,0.3);
+}
+
+input,select{
+width:90%;
+padding:10px;
+margin:10px;
+border:none;
+border-radius:10px;
+}
+
+button{
+padding:10px 20px;
+background:white;
+border:none;
+border-radius:20px;
+cursor:pointer;
+font-weight:bold;
+}
+
+button:hover{
+background:black;
+color:white;
+}
+
+</style>
 </head>
 
 <body>
 
-<h2>Book Bus Ticket</h2>
+<div class="form-box">
+
+<h2>🎫 Book Bus Ticket</h2>
 
 <form method="post">
 
-Name:<br>
-<input type="text" name="name"><br><br>
+<input type="text" name="name" placeholder="Enter Name" required>
 
-Source:<br>
-<input type="text" name="source"><br><br>
+<input type="text" name="source" placeholder="Source City" required>
 
-Destination:<br>
-<input type="text" name="destination"><br><br>
+<input type="text" name="destination" placeholder="Destination City" required>
+
+<select name="time">
+<option>8:00 AM</option>
+<option>12:00 PM</option>
+<option>4:00 PM</option>
+<option>8:00 PM</option>
+</select>
+
+<input type="text" name="seat" placeholder="Seat Number (A1)" required>
 
 <button type="submit">Book Ticket</button>
 
 </form>
+
+<br>
+<a href="/" style="color:white;">Back</a>
+
+</div>
 
 </body>
 </html>

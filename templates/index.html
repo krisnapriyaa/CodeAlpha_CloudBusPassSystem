@@ -1,16 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Bus Pass System</title>
+<title>Cloud Bus Pass System</title>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:Segoe UI;
+background: linear-gradient(-45deg,#667eea,#764ba2,#6dd5ed,#2193b0);
+background-size:400% 400%;
+animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.card{
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(15px);
+padding:50px;
+border-radius:20px;
+text-align:center;
+color:white;
+box-shadow:0 10px 40px rgba(0,0,0,0.3);
+}
+
+h1{
+font-size:40px;
+margin-bottom:30px;
+}
+
+button{
+padding:12px 30px;
+margin:10px;
+border:none;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
+background:white;
+font-weight:bold;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+background:#222;
+color:white;
+}
+
+</style>
 </head>
 
 <body>
 
-<h2>Cloud Bus Ticket Booking</h2>
+<div class="card">
 
-<a href="/book">Book Ticket</a>
-<br><br>
-<a href="/tickets">View Tickets</a>
+<h1>🚌 Cloud Bus Pass System</h1>
+
+<a href="/book">
+<button>Book Ticket</button>
+</a>
+
+<a href="/tickets">
+<button>View Tickets</button>
+</a>
+
+</div>
 
 </body>
 </html>
